@@ -1,4 +1,3 @@
-
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -15,52 +14,91 @@
     body {
       font-family: 'Roboto', sans-serif;
     }
+
+    /* Navigation styling */
     .nav-link {
-      margin: 0 10px;
+      margin: 0 15px;
+      font-weight: 600;
     }
-    .nav-link::after {
-      content: '|';
-      margin-left: 10px;
+
+    .nav-link:hover {
+      text-decoration: underline;
     }
-    .nav-link:last-child::after {
-      content: '';
+
+    /* Styling for content blocks */
+    .content-box {
+      background-color: #f9f9f9;
+      border: 1px solid #e5e7eb;
+      padding: 20px;
+      text-align: center;
+      border-radius: 10px;
+    }
+
+    .content-box h3 {
+      font-size: 1.25rem;
+      font-weight: 700;
+      margin-bottom: 10px;
+    }
+
+    .content-box p {
+      font-size: 0.9rem;
+      color: #4a5568;
+    }
+
+    /* Footer styling */
+    footer {
+      margin-top: 20px;
+      text-align: center;
+      padding: 10px 0;
+      font-size: 0.8rem;
+      color: #6b7280;
     }
   </style>
 </head>
-<body class="bg-white text-black flex flex-col items-center">
+<body class="bg-gray-50 text-gray-900 flex flex-col items-center min-h-screen">
   <!-- Navigation Bar -->
-  <nav class="mt-4">
-    <ul class="flex space-x-4 text-lg">
-      <li class="nav-link">got milk?</li>
-      <li class="nav-link">recipes</li>
-      <li class="nav-link">store</li>
-      <li class="nav-link">fun</li>
-      <li class="nav-link">news</li>
+  <nav class="bg-white shadow-md w-full py-4">
+    <ul class="flex justify-center space-x-8 text-lg">
+      <li class="nav-link">Got Milk?</li>
+      <li class="nav-link">Recipes</li>
+      <li class="nav-link">Store</li>
+      <li class="nav-link">Fun</li>
+      <li class="nav-link">News</li>
     </ul>
   </nav>
 
-  <!-- Main Image -->
-  <div class="mt-8">
-    <!-- Ensure to replace the src path with the correct relative URL from your GitHub repo -->
-    <img alt="got milk? text in a unique font" class="mx-auto" height="100" src="assets/images/got_milk_image.png" width="400"/>
+  <!-- Main Content Block -->
+  <div class="mt-8 w-full max-w-4xl text-center">
+    <h1 class="text-4xl font-bold mb-6">Welcome to Got Milk?</h1>
+    <p class="text-lg text-gray-600 mb-4">
+      Explore our collection of recipes, shop at our store, and stay updated with the latest milk news!
+    </p>
   </div>
 
-  <!-- Image Cards Section -->
-  <div class="mt-8 flex space-x-4">
-    <!-- First Image Card -->
-    <div class="w-24 h-32 bg-white border border-gray-300 flex items-center justify-center">
-      <img alt="Image of a product with a drink" class="w-full h-full object-cover" height="120" src="assets/images/product_image_1.png" width="80"/>
+  <!-- Content Cards Section (replacing images with text-based content) -->
+  <div class="mt-8 flex justify-center space-x-6 max-w-4xl">
+    <!-- First Content Box -->
+    <div class="content-box w-64">
+      <h3>Recipes</h3>
+      <p>Discover delicious, milk-based recipes that are perfect for any meal or occasion.</p>
     </div>
 
-    <!-- Second Image Card -->
-    <div class="w-24 h-32 bg-black flex items-center justify-center">
-      <img alt="Number 10 with got milk? text" class="w-full h-full object-cover" height="80" src="assets/images/number_10_image.png" width="80"/>
+    <!-- Second Content Box -->
+    <div class="content-box w-64">
+      <h3>Store</h3>
+      <p>Visit our store for a wide selection of dairy products and accessories.</p>
     </div>
 
-    <!-- Third Image Card -->
-    <div class="w-24 h-32 bg-blue-500 flex items-center justify-center">
-      <img alt="Image of a person jumping" class="w-full h-full object-cover" height="80" src="assets/images/person_jumping_image.png" width="80"/>
+    <!-- Third Content Box -->
+    <div class="content-box w-64">
+      <h3>Fun Facts</h3>
+      <p>Learn interesting facts about milk and how it benefits your health.</p>
     </div>
   </div>
+
+  <!-- Footer -->
+  <footer class="w-full bg-white mt-12 py-4">
+    <p>© 2024 Got Milk? All rights reserved. | Privacy Policy | Terms of Service</p>
+  </footer>
 </body>
 </html>
